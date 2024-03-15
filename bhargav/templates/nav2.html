@@ -1,0 +1,41 @@
+<!-- nav2.css to be linked with {% url 'navwe' %}
+it is for login users -->
+{% load static %}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+            <a class="navbar-brand" href="{% url 'home' %}" style="font-weight: bold;font-family: 'Piedra', cursive;">bhargavyaari</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="w" href="{% url 'gallery' %}">Gallery</a>
+                </li>
+                <li><a class="w" href="index.html" onclick="alert('You are about to logout. click ok to continue.')">Logout <span class="glyphicon glyphicon-log-out"></span></a></li>
+                <li><a class="w" href="{% url 'settings' %}">Settings</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle w" data-toggle="dropdown" href="#">More<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="w" href="{%url 'contact' %}">Contact us</a></li>
+                        <li><a class="w" href="{%url 'about' %}">About us</a></li>
+                        <li><a class="w" href="{% url  'team' %}">Our Team</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="row nav-row-design">
+            <div class="col-xs-4 col-sm-4 col-md-2 t"><a href="{% url  'beach' %}">Beaches</a></div>
+            <div class="col-xs-4 col-sm-4 col-md-2 t"><a href="{% url  'hill' %}">Hill-Stations</a></div>
+            <div class="col-xs-4 col-sm-4 col-md-2 t"><a href="{% url  'history'  %}">Historical Heritage</a></div>
+            <div class="col-xs-4 col-sm-4 col-md-2 t"><a href="{% url  'parks'  %}">National Parks</a></div>
+            <div class="col-xs-4 col-sm-4 col-md-2 t"><a href="{% url  'religious'  %}">Religious Richness</a></div>
+            <div class="col-xs-4 col-sm-4 col-md-2 t"><a href="{% url  'honey'  %}">Honeymoon Destinations</a></div>
+        </div>
+    </div>
+
+</nav>
